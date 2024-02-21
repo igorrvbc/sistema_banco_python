@@ -1,0 +1,20 @@
+Especificações do Projeto
+versão 1.0
+
+
+Conta:
+	- não se preocupar em criar conta, identifcar usuário...
+
+Operação Depósito:
+	- deverá ser possível depositar valores positivos (não permitir valores negativos);
+	- devem ser armazenados numa variável e exibidos na operação 'Extrato'
+
+Operação Saque:
+	- Permitir 3 saques diários com limite máximo de R$ 500,00 por saque;
+	- Caso não tenha dinheiro em conta, exibir mensagem 'operação não é possível, falta de saldo';
+	- saques devem ser armazenados em uma variável e exibidos na operação de extrato.
+
+Operação Extrato:
+	- listar os depósitos e saques realizado na conta;
+	- no fim da listagem exibir o saldo atual da conta.
+	- valores devem ser exibidos utilizando o formato R$ xxx.xx ( 1500.45 = R$ 1500.45 ) 
