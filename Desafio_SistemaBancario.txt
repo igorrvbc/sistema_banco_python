@@ -18,3 +18,43 @@ Operação Extrato:
 	- listar os depósitos e saques realizado na conta;
 	- no fim da listagem exibir o saldo atual da conta.
 	- valores devem ser exibidos utilizando o formato R$ xxx.xx ( 1500.45 = R$ 1500.45 ) 
+
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Versão 2.0
+
+Objetivo Geral:
+
+- Separar as funções existentes de saque, depósito e extrato em funções. 
+- Criar duas novas funções: cadastrar  usuário (cliente) e cadastrar conta bancária.
+
+Regras:
+
+.função SAQUE deve receber os args apenas por nome(keyword only). 
+**sugestão de args: saldo, valor, extrato, limite, numero_saques,limite_saques.
+**sugestão de retorno: saldo e extrato.
+
+.func DEPOSITO deve receber os args apenas por posição(positional only).
+**sugestão de args: saldo, valor, extrato.
+**sugestão de retorno: saldo e extrato.
+
+.func EXTRATO deve receber os args por posição e nome (positional only e keyword only)
+Args posicionais: saldo, Args nomeados: extrato.
+
+Criar User(client)
+- o programa deve armazenar os usuários em uma lista, um usuário é composto por: 
+	nome, data de nascimento, cpf e endereço.
+O endereço é uma string com o formato: logradouro, nro - bairro - cidade/sigla estado. 
+Deve ser armazenado somente os nros do CPF.não podemos cadastrar 2 usuários com o mesmo CPF.
+
+Criar Conta corrente(account)
+- O programa deve armazenar contas em uma lista, uma´conta é composta por: agência, nro da conta e usuário.
+- O nro da conta é sequencial, a partir de 1.
+- O nro da agência é "0001"
+- O usuário pode ter mais de uma conta, mas uma conta pertece a somente um usário.
+
+DICA:
+
+- Para vincular um usuário a uma conta, filtre a lista de users buscando o número do CPF informado para cada usuário da lista.
